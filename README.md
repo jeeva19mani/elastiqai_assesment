@@ -61,6 +61,6 @@ Here we are Automating the UI of LambdaTest https://www.lambdatest.com/selenium-
 - Finally, verified the expected filtered result.
 
 ## To Run a File
-- Activate the venv by `source .venv/bin/activate`
-- Use `python3 -m pytest -s (use entire file path) test file.py::class name::testcase name` or 
-- Use Pycharm IDE or other IDE import pytest module into it. then Configure the run console and run it.  
+- Execute `test_venv_setup.sh` file by `./test_venv_setup.sh` or `sh test_venv_setup.sh`. It will install the required softwares, libraries and create Virtual Environment to execute the test.
+- Use `python3 -m pytest -s (use entire file path) test file.py::class name::testcase name`
+- Or Use Pycharm IDE or other IDE import pytest module into it. then Configure the run console and run it.  
