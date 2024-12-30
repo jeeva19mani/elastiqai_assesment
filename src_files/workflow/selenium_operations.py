@@ -49,7 +49,8 @@ class SeleOperation:
     def get_element(self, locator_type, locator):
 
         try:
-            element = self.driver.find_element(get_locator_type(locator_type), locator)
+            element = self.driver.find_element(
+                get_locator_type(locator_type), locator)
             return element
 
         except NoSuchElementException:
@@ -59,3 +60,6 @@ class SeleOperation:
         except Exception as e:
             self.foot.info(f"Error occurred {e} ")
             raise e
+
+    def close_browser(self):
+        self.driver.quit()
