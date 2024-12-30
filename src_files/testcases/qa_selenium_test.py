@@ -20,7 +20,8 @@ class TestSelenium(Constants):
         self.test_helper.table_content()
         input_text = "New York"
         self.print.step("Navigating through Search Bar")
-        result_table_body = self.test_helper.search_input(input_text)
+        result_table_body = self.test_helper. \
+            search_input(input_text)
         out_list = [i for i in result_table_body.text.split("\n")
                     if input_text in i]
         assert self.expected_output_count == len(out_list), \
@@ -31,6 +32,7 @@ class TestSelenium(Constants):
         f_result_1 = f_result.text.replace("(", "").replace(")", "")
         assert self.expected_filtered_result == f_result_1[18:], \
             f"Filtered output is Mismatch {f_result_1} "
-        self.print.info(f"Verified the Expected: {self.expected_filtered_result}"
-                        f" and Actual: {f_result_1[18:]} Search Result")
+        self.print.info(f"Verified the Expected:"
+                        f"{self.expected_filtered_result} and"
+                        f"Actual: {f_result_1[18:]} Search Result")
         self.test_helper.closing_browser()
