@@ -33,3 +33,4 @@ class TestSelenium(Constants):
             f"Filtered output is Mismatch {f_result_1} "
         self.print.info(f"Verified the Expected: {self.expected_filtered_result}"
                         f" and Actual: {f_result_1[18:]} Search Result")
+        self.test_helper.closing_browser()
