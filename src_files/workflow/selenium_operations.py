@@ -59,6 +59,3 @@ class SeleOperation:
         except Exception as e:
             self.foot.info(f"Error occurred {e} ")
             raise e
-
-    def close_browser(self):
-        self.driver.quit()
