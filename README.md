@@ -26,6 +26,7 @@ Here we are Automating the UI of LambdaTest https://www.lambdatest.com/selenium-
 - then`wait_for_element_visible`, functions implemented with explicit wait. It waits until the web element to present be later returns it. Added`try` block and handled expected `TimeoutException` exception. if the exception Varies it will raise that exception.
 - `get_element` Function returns the web element.  Added`try` block and handled expected `NoSuchElementException` exception.
 - `close_browser` It closes the browser once all the operations completes.
+
 ### helper.py
 - This file imports the class `SeleOperation` from `selenium_operations.py`.
 - Here we have all the helper files with test actions.
@@ -36,7 +37,8 @@ Here we are Automating the UI of LambdaTest https://www.lambdatest.com/selenium-
 - `search_input`functions verifies the search bar, And it will enter the `input text`. finally returns the filtered table body content.
 - `filter_content`functions verifies the result of the searched test.
 - The above each function has the Assertion function to verify the expected outcome from the respective operation.
-- `final_cleanup` it just closes the browser.
+- `closing_browser` it just closes the browser.
+
 ### footprint_helper.py
 - Simple logging file returns the level of the operations and timing.
 - By importing datetime module initialised in `FootprintHelper` constructor file.
@@ -58,5 +60,5 @@ Here we are Automating the UI of LambdaTest https://www.lambdatest.com/selenium-
 
 ## Environment Setup and to Run a file
 - Activate the venv by `source .venv/bin/activate`
-- Use `python3 -m pytest -s (use entire file path) test file.py::class name::testcase name` or 
+- Use `python3 -m pytest -s (use entire file path)/test_file.py::class name::testcase name` or 
 - Use Pycharm IDE or other IDE import pytest module into it. then Configure the run console and run it.  
