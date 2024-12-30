@@ -58,6 +58,3 @@ class Helper(WebLocator, Constants):
         assert f_result is not False, "Table Element is Unavailable"
         self.foot.info("Returning the Filter Message Content")
         return f_result
-
-    def final_cleanup(self):
-        self.sele_op.close_browser()
