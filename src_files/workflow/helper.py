@@ -1,6 +1,7 @@
 from src_files.workflow.selenium_operations import \
     SeleOperation
-from src_files.testcases.locator_elements import WebLocator, Constants
+from src_files.testcases.locator_elements import \
+    WebLocator, Constants
 from src_files.workflow.footprint_helper import FootprintHelper
 
 
@@ -58,3 +59,7 @@ class Helper(WebLocator, Constants):
         assert f_result is not False, "Table Element is Unavailable"
         self.foot.info("Returning the Filter Message Content")
         return f_result
+
+    def closing_browser(self):
+        self.sele_op.close_browser()
+
