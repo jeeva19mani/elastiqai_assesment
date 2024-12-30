@@ -13,10 +13,6 @@ Here we are Automating the UI of LambdaTest https://www.lambdatest.com/selenium-
 - `pytest` 8.3.4 or higher Library
 - `Chrome` 131.0.6778.205 or higher
 
-## Environmental Setup
-- Attached Bash Script for venv setup `test_venv_setup.sh`
-- Execute this setup script on console`./test_venv_setup.sh` or `sh test_venv_setup.sh`
-
 # Workflow File Details
 - files available under `src_files/workflow/`.
 
@@ -60,7 +56,7 @@ Here we are Automating the UI of LambdaTest https://www.lambdatest.com/selenium-
 - then passing the input argument to the `search_input` and from the returned value asserting with the expected table body count.
 - Finally, verified the expected filtered result.
 
-## To Run a File
+## Environment Setup and to Run a file
 - Activate the venv by `source .venv/bin/activate`
 - Use `python3 -m pytest -s (use entire file path) test file.py::class name::testcase name` or 
 - Use Pycharm IDE or other IDE import pytest module into it. then Configure the run console and run it.  
